@@ -1,0 +1,55 @@
+.flex {
+    display: flex;
+}
+.fRow {
+    flex-direction: row;
+}
+.fColumn {
+    flex-direction: column;
+}
+.fCenter {
+    align-items: center;
+    justify-content: center;
+}
+.jCenter {
+    justify-content: center;
+}
+.aCenter {
+    align-items: center;
+}
+.jBet {
+    justify-content: space-between;
+}
+.jAro {
+    justify-content: space-around;
+}
+.fGap2 {
+    gap: 2px;
+}
+.fGap5 {
+    gap: 5px;
+}
+.fGap10 {
+    gap: 10px;
+}
+.fGap15 {
+    gap: 15px;
+}
+.fGap20 {
+    gap: 20px;
+}
+.pad3 {
+    padding: 3px;
+}
+.pad5 {
+    padding: 5px;
+}
+.pad10 {
+    padding: 10px;
+}
+.pad15 {
+    padding: 15px;
+}
+.pad20 {
+    padding: 20px;
+}
