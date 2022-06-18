@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Test from '../Test/Test';
 import '../../global.css';
-import classes from './OneByOneQuiz.module.css';
+import classes from './TestByTest.module.css';
 import Index from '../Index/Index';
 import Button from '../../UI/Button/Button';
 
-const OneByOneQuiz = (props) => {
+const TestByTest = (props) => {
     const [currentTest, setCurrentTest] = useState(props.tests[0]);
     const [currentIdx, setCurrentIdx] = useState(0);
 
@@ -47,4 +47,4 @@ const OneByOneQuiz = (props) => {
     );
 };
 
-export default OneByOneQuiz;
+export default TestByTest;

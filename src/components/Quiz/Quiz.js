@@ -1,14 +1,14 @@
 import React from 'react';
-import OneByOneQuiz from '../OneByOneQuiz/OneByOneQuiz';
 import '../../global.css';
-import AllInOneQuiz from '../AllInOneQuiz/AllInOneQuiz';
+import TestByTest from '../TestByTest/TestByTest';
+import TestsList from '../TestsList/TestsList';
 
 const Quiz = (props) => {
     const { mode, tests } = props;
     return (
         <>
-            {mode === "single" && <AllInOneQuiz tests={tests} />}
-            {mode === "multiple" && <OneByOneQuiz tests={tests} />}
+            {mode === "list" && <TestsList tests={tests} />}
+            {mode === "onebyone" && <TestByTest tests={tests} />}
         </>
     );
 };

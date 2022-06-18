@@ -1,0 +1,15 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 160px;
+    margin: 40px auto;
+}
+hr {
+    height: 3px;
+    background: rgba(53, 121, 96, 0.6);
+    border: none;
+}
+hr:last-child {
+    display: none;
+}

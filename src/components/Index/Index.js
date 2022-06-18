@@ -11,7 +11,7 @@ const Index = (props) => {
                     className={`br5 ${classes.idx} ${(idx === props.currentIdx && classes.idxSelected)}`} 
                     onClick={() => props.onClick(idx)}
                 >
-                    {idx}
+                    {idx + 1}
                 </div>
             )}
         </div>

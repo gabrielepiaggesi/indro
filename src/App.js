@@ -15,7 +15,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      {tests.length && <Quiz mode="multiple" tests={tests} />}
+      {tests.length && <Quiz mode="list" tests={tests} />}
     </React.Fragment>
   );
 }
