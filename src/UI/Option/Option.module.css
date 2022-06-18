@@ -1,0 +1,13 @@
+.box {
+    padding: 20px;
+    border: 0.5px solid rgba(230, 230, 230, 1);
+    background-color: rgba(230, 230, 230, 1);
+    cursor: pointer;
+    font-size: 23px;
+}
+.selected {
+    border-color: rgba(66, 66, 66, 0.2);
+    background-color: white;
+    box-shadow: rgba(53, 121, 96, 0.3) 0px 8px 24px;
+    /* box-shadow: rgba(53, 121, 96, 0.5) 0px 7px 29px 0px; */
+}

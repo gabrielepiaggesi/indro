@@ -1,0 +1,16 @@
+.w20 {
+    width: 20%;
+}
+.w50 {
+    width: 50%;
+}
+.w80 {
+    width: 80%;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 40px;
+    margin: 40px auto;
+}

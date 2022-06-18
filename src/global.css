@@ -23,19 +23,19 @@
 .jAro {
     justify-content: space-around;
 }
-.fGap2 {
+.gap2 {
     gap: 2px;
 }
-.fGap5 {
+.gap5 {
     gap: 5px;
 }
-.fGap10 {
+.gap10 {
     gap: 10px;
 }
-.fGap15 {
+.gap15 {
     gap: 15px;
 }
-.fGap20 {
+.gap20 {
     gap: 20px;
 }
 .pad3 {
@@ -52,4 +52,43 @@
 }
 .pad20 {
     padding: 20px;
+}
+.grid {
+    display: grid;
+}
+.n2Col {
+    grid-template-columns: repeat(2, 1fr);
+}
+.n2Row {
+    grid-template-rows: 50% 50%;
+}
+.mAuto {
+    margin: auto;
+}
+.oHidden {
+    overflow: hidden;
+}
+.oAuto {
+    overflow: auto;
+}
+.oYAuto {
+    overflow-y: auto;
+}
+.br5 {
+    border-radius: 5px;
+}
+.fWrap {
+    flex-wrap: wrap;
+}
+.fBold {
+    font-weight: bold;
+}
+.maxH100 {
+    max-height: 100px;
+}
+.maxH150 {
+    max-height: 150px;
+}
+.maxH200 {
+    max-height: 200px;
 }

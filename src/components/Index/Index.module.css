@@ -1,0 +1,14 @@
+.idx {
+    background-color: rgba(230, 230, 230, 1);;
+    color: #424242;
+    border: 0.5px solid rgba(230, 230, 230, 1);;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.idxSelected {
+    background-color: white;
+}
