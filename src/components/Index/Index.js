@@ -8,7 +8,10 @@ const Index = (props) => {
             {props.elements.map((elem, idx) => 
                 <div 
                     key={elem.id}
-                    className={`br5 ${classes.idx} ${(idx === props.currentIdx && classes.idxSelected)}`} 
+                    className={`br5 ${classes.idx} 
+                        ${(idx === props.currentIdx && classes.idxSelected)} 
+                        ${elem.answer ? classes.indexDone : ''}
+                    `} 
                     onClick={() => props.onClick(idx)}
                 >
                     {idx + 1}

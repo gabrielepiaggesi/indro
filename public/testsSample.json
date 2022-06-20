@@ -5,12 +5,7 @@
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? Quisque euismod, consectetur adipiscing elit? Quisque euismod?",
             "img": null
         },
-        "options": [
-            { "text": "A" },
-            { "text": "B" },
-            { "text": "C" },
-            { "text": "D" }
-        ]
+        "type": "text"
     },
     {
         "id": 2,
@@ -18,12 +13,7 @@
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? Quisque euismod, consectetur adipiscing elit? Quisque euismod?",
             "img": "js-debug.png"
         },
-        "options": [
-            { "text": "A" },
-            { "text": "B" },
-            { "text": "C" },
-            { "text": "D" }
-        ]
+        "type": "file"
     },
     {
         "id": 3,

@@ -15,7 +15,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      {tests.length && <Quiz mode="list" tests={tests} />}
+      {tests.length && <Quiz mode="onebyone" tests={tests} />}
     </React.Fragment>
   );
 }

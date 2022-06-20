@@ -104,3 +104,27 @@
 .w100 {
     width: 100%;
 }
+.dN {
+    display: none;
+}
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 21px;
+    resize: none;
+    border: 1px solid rgba(53, 121, 96, 0.5);
+    outline: none;
+    font-family: inherit;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.mt120 {
+    margin-top: 120px;
+}
+.fileRow {
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(230, 230, 230, 1);
+    border-radius: 5px;
+}

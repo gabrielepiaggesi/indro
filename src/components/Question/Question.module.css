@@ -1,7 +1,14 @@
-.text {
+.title {
     text-align: left;
     font-weight: bold;
     font-size: 23px;
+    margin: 0 auto 40px auto;
+}
+
+.bio {
+    text-align: left;
+    font-weight: normal;
+    font-size: 21px;
     margin: 0 auto 40px auto;
 }
 

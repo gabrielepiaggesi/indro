@@ -19,13 +19,25 @@ const TestByTest = (props) => {
         setCurrentTest((prevState) => ({ ...prevState, answer: optionIdx+'' }));
     };
 
+    const onFileSelectSuccessHandler = (file) => {
+        props.tests[currentIdx].answer = file;
+        setCurrentTest((prevState) => ({ ...prevState, answer: file }));
+    };
+
+    const onFreeTextSaveHandler = (text) => {
+        props.tests[currentIdx].answer = text;
+        setCurrentTest((prevState) => ({ ...prevState, answer: text }));
+    };
+
     return (
-        <div className={classes.box}>
+        <div className={`${classes.box}`}>
             <Index elements={props.tests} currentIdx={currentIdx} onClick={onIndexClickHandler} />
             <Test 
                 key={currentTest.id} // needs a key to trigger React change based on props change, currentTest doesnt trigger rerender because is an object and react doenst see any difference.
                 test={currentTest}
                 onOptionClick={onOptionClickHandler} 
+                onFileSelectSuccess={onFileSelectSuccessHandler} 
+                onFreeTextSave={onFreeTextSaveHandler}
             />
             <div className="flex fRow jBet">
                 <Button 
