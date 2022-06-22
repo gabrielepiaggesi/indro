@@ -20,13 +20,17 @@ const TestByTest = (props) => {
     };
 
     const onFileSelectSuccessHandler = (file) => {
-        props.tests[currentIdx].answer = file;
-        setCurrentTest((prevState) => ({ ...prevState, answer: file }));
+        props.tests[currentIdx].answer = file.name;
+        setCurrentTest((prevState) => ({ ...prevState, answer: file.name }));
     };
 
     const onFreeTextSaveHandler = (text) => {
         props.tests[currentIdx].answer = text;
         setCurrentTest((prevState) => ({ ...prevState, answer: text }));
+    };
+
+    const onConfirmHandler = () => {
+        props.onConfirm(props.tests);
     };
 
     return (
@@ -47,13 +51,20 @@ const TestByTest = (props) => {
                 >
                     INDIETRO
                 </Button>
-                <Button 
+                {currentIdx < props.tests.length-1 && <Button 
                     disabled={!currentTest.answer || currentIdx === props.tests.length-1} 
                     onClick={() => onIndexClickHandler(currentIdx + 1)}
                     className="fBold"
                 >
                     AVANTI
-                </Button>
+                </Button>}
+                {currentIdx === props.tests.length-1 && <Button 
+                    disabled={!currentTest.answer} 
+                    onClick={onConfirmHandler}
+                    className="fBold"
+                >
+                    CONFERMA
+                </Button>}
             </div>
         </div>
     );

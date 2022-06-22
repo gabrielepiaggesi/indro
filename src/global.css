@@ -38,6 +38,9 @@
 .gap20 {
     gap: 20px;
 }
+.gap40 {
+    gap: 40px;
+}
 .pad3 {
     padding: 3px;
 }
@@ -58,6 +61,18 @@
 }
 .n2Col {
     grid-template-columns: repeat(2, 1fr);
+}
+.n2Col7030 {
+    grid-template-columns: 70% 30%;
+}
+.n2Col6535 {
+    grid-template-columns: 65% 35%;
+}
+.n2Col6040 {
+    grid-template-columns: 60% 40%;
+}
+.n1Col {
+    grid-template-columns: repeat(1, 1fr);
 }
 .n2Row {
     grid-template-rows: 50% 50%;
@@ -122,9 +137,16 @@ textarea {
 .mt120 {
     margin-top: 120px;
 }
+.mt80 {
+    margin-top: 80px;
+}
 .fileRow {
     padding: 20px;
     width: 100%;
     background-color: rgba(230, 230, 230, 1);
     border-radius: 5px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.hFitCont {
+    height: fit-content;
 }

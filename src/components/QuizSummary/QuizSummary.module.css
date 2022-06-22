@@ -1,0 +1,45 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 60px;
+    margin: 40px auto;
+    margin-bottom: 160px;
+}
+.title {
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    font-size: 36px;
+    margin: 0 auto 20px auto;
+}
+.question {
+    text-align: left;
+    font-weight: bold;
+    font-size: 23px;
+    margin: 0 auto 20px auto;
+}
+.answer {
+    text-align: left;
+    font-weight: normal;
+    font-size: 21px;
+    margin: 0 auto 0px auto;
+}
+hr {
+    height: 3px;
+    background: rgba(53, 121, 96, 0.6);
+    border: none;
+}
+hr:last-child {
+    display: none;
+}
+.summary {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    margin: auto;
+    padding: 20px 0;
+    font-size: 21px;
+    border-top: 1px lightgrey solid;
+}

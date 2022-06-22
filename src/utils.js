@@ -1,4 +1,4 @@
-export async function loadJSON (url) {
+export async function loadJSON (url, id = 0) {
     const res = await fetch(url);
     return await res.json();
 }

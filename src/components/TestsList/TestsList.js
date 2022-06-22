@@ -13,12 +13,13 @@ const TestsList = (props) => {
     };
 
     const onFileSelectSuccessHandler = (file, idx) => {
-        props.tests[idx].answer = file;
+        props.tests[idx].answer = file.name;
         calcTestsDone();
     };
 
     const onFreeTextSaveHandler = (text, idx) => {
         props.tests[idx].answer = text;
+        console.log(props.tests[idx]);
         calcTestsDone();
     };
 
@@ -27,19 +28,22 @@ const TestsList = (props) => {
         setTestsDone(testsDone);
     };
 
+    const onConfirmHandler = () => {
+        props.onConfirm(props.tests);
+    };
+
     return (
         <div className={`flex fColumn fCenter ${classes.box}`}>
             {props.tests.map((test, idx) => 
-                <>
+                <div key={'div'+test.id} className={classes.testWrapper}>
                     <Test 
-                        key={test.id} 
+                        key={'test'+test.id} 
                         test={test}
                         onOptionClick={(e) => onOptionClickHandler(e, idx)} 
                         onFileSelectSuccess={(e) => onFileSelectSuccessHandler(e, idx)} 
                         onFreeTextSave={(e) => onFreeTextSaveHandler(e, idx)}
                     />
-                    <hr className="w100"></hr>
-                </>
+                </div>
             )}
             <div className={`flex fRow aCenter jBet w100 ${classes.summary}`}>
                 <Button 
@@ -50,6 +54,7 @@ const TestsList = (props) => {
                 <p>Hai risposto a {testsDone} su {props.tests.length}</p>
                 <Button 
                     className="fBold"
+                    onClick={onConfirmHandler}
                 >
                     CONFERMA
                 </Button>

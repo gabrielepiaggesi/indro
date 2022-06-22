@@ -26,7 +26,8 @@
             { "text": "B" },
             { "text": "C" },
             { "text": "D" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 4,
@@ -39,7 +40,8 @@
             { "text": "B" },
             { "text": "C" },
             { "text": "D" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 5,
@@ -52,7 +54,8 @@
             { "text": "B" },
             { "text": "C" },
             { "text": "D" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 6,
@@ -67,7 +70,8 @@
             { "text": "D" },
             { "text": "A" },
             { "text": "B" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 7,
@@ -80,7 +84,8 @@
             { "text": "B" },
             { "text": "C" },
             { "text": "D" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 8,
@@ -95,7 +100,8 @@
             { "text": "D" },
             { "text": "A" },
             { "text": "B" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 9,
@@ -144,7 +150,7 @@
         },
         "options": [
             { "text": "A" },
-            { "text": "B" },
+            { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? Quisque euismod, Lorem ipsum dolor sit amet, consectetur adipiscing elit? Quisque euismod" },
             { "text": "C" },
             { "text": "D" }
         ]
@@ -160,7 +166,8 @@
             { "text": "B" },
             { "text": "C" },
             { "text": "D" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 14,
@@ -175,7 +182,8 @@
             { "text": "D" },
             { "text": "A" },
             { "text": "B" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 15,
@@ -309,7 +317,8 @@
             { "text": "B" },
             { "text": "C" },
             { "text": "D" }
-        ]
+        ],
+        "mode": "grid"
     },
     {
         "id": 25,
@@ -318,10 +327,11 @@
             "img": null
         },
         "options": [
-            { "text": "A" },
+            { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit? Quisque euismod" },
             { "text": "B" },
             { "text": "C" },
             { "text": "D" }
-        ]
+        ],
+        "mode": "grid"
     }
 ]

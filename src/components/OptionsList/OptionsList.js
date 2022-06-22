@@ -11,7 +11,7 @@ const OptionsList = (props) => {
     };
 
     return (
-        <div className="grid n2Col gap20">
+        <div className={`grid gap20 ${props.mode === 'grid' ? 'n2Col' : 'n1Col'} hFitCont`}>
             {props.options.map((opt, idx) => 
                 <Option 
                     key={props.testId + '-' + idx} 
