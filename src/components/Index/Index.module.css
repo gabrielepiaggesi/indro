@@ -1,0 +1,19 @@
+.idx {
+    background-color: rgba(230, 230, 230, 1);
+    color: #424242;
+    border: 1px solid rgba(230, 230, 230, 1);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.idxSelected {
+    background-color: white;
+    border: 1px solid #424242;
+}
+.indexDone {
+    background-color: white;
+    text-decoration: line-through;
+}

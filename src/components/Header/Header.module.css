@@ -1,0 +1,15 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px lightgrey solid;
+    font-size: 28px;
+    background-color: white;
+    height: 80px;
+}
+.logo {
+    width: 42px;
+    height: 42px;
+    background-position: center;
+    background-size: cover;
+}

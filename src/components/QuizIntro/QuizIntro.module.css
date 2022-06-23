@@ -1,0 +1,22 @@
+.title {
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    font-size: 36px;
+    margin: 0;
+}
+.bio {
+    text-align: left;
+    font-weight: normal;
+    font-size: 21px;
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+li {
+    margin-bottom: 10px;
+}
+li:last-child {
+    margin-bottom: 0;
+}
