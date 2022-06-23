@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import '../../global.css';
 import { loadJSON } from '../../utils';
+import QuizIntro from '../QuizIntro/QuizIntro';
 import QuizSummary from '../QuizSummary/QuizSummary';
 import TestByTest from '../TestByTest/TestByTest';
 import TestsList from '../TestsList/TestsList';
 
 const Quiz = (props) => {
-    const { id, mode } = props;
+    const { id, mode, title } = props;
     const [tests, setTests] = useState(undefined);
     const [showSummary, setShowSummary] = useState(false);
+    const [showIntro, setShowIntro] = useState(true);
 
     useEffect(() => {
-        console.log('ciao');
         loadJSON('testsSample.json', id)
         .then(sample => setTests(sample));
     }, [id]);
@@ -31,12 +32,20 @@ const Quiz = (props) => {
         setShowSummary(false);
     };
 
+    const onStartQuizHandler = () => {
+        setShowIntro(false);
+    };
+
     if (showSummary) return (<QuizSummary tests={tests} onSaveAndSend={onSaveAndSendHandler} onBack={onBackHandler} />);
 
     return (
         <>
-            {mode === "list" && <TestsList tests={tests} onConfirm={onConfirmHandler} />}
-            {mode === "onebyone" && <TestByTest tests={tests} onConfirm={onConfirmHandler} />}
+            {showIntro ? 
+                <QuizIntro title={title} onStartQuiz={onStartQuizHandler} /> :   
+                    mode === "onebyone" ? 
+                        <TestByTest tests={tests} onConfirm={onConfirmHandler} /> :
+                        <TestsList tests={tests} onConfirm={onConfirmHandler} />
+            }
         </>
     );
 };

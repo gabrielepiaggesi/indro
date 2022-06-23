@@ -17,12 +17,11 @@
     border-bottom: none;
 }
 .summary {
-    background-color: white;
     position: fixed;
     bottom: 0;
     width: 50%;
     margin: auto;
-    padding: 20px 0;
+    padding: 15px;
     font-size: 21px;
-    border-top: 1px lightgrey solid;
+    /* border-top: 1px lightgrey solid; */
 }

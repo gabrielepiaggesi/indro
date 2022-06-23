@@ -4,6 +4,7 @@ import '../../global.css';
 import classes from './TestByTest.module.css';
 import Index from '../Index/Index';
 import Button from '../../UI/Button/Button';
+import Card from '../../UI/Card/Card';
 
 const TestByTest = (props) => {
     const [currentTest, setCurrentTest] = useState(props.tests[0]);
@@ -34,7 +35,7 @@ const TestByTest = (props) => {
     };
 
     return (
-        <div className={`${classes.box}`}>
+        <Card className={`pad15 ${classes.box}`}>
             <Index elements={props.tests} currentIdx={currentIdx} onClick={onIndexClickHandler} />
             <Test 
                 key={currentTest.id} // needs a key to trigger React change based on props change, currentTest doesnt trigger rerender because is an object and react doenst see any difference.
@@ -66,7 +67,7 @@ const TestByTest = (props) => {
                     CONFERMA
                 </Button>}
             </div>
-        </div>
+        </Card>
     );
 };
 

@@ -1,23 +1,15 @@
-.box {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 60px;
-    margin: 40px auto;
-    margin-bottom: 160px;
-}
 .title {
     text-align: left;
     font-weight: bold;
     width: 100%;
     font-size: 36px;
-    margin: 0 auto 20px auto;
+    margin: 0;
 }
 .question {
     text-align: left;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 23px;
-    margin: 0 auto 20px auto;
+    margin-bottom: 10px;
 }
 .answer {
     text-align: left;

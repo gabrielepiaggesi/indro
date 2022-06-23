@@ -41,6 +41,9 @@
 .gap40 {
     gap: 40px;
 }
+.gap60 {
+    gap: 60px;
+}
 .pad3 {
     padding: 3px;
 }
@@ -149,4 +152,22 @@ textarea {
 }
 .hFitCont {
     height: fit-content;
+}
+.boxSha {
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.h100 {
+    height: 100%;
+}
+.bgrW {
+    background-color: white;
+}
+.mB40 {
+    margin-bottom: 40px;
+}
+.mB60 {
+    margin-bottom: 60px;
+}
+.mB80 {
+    margin-bottom: 80px;
 }

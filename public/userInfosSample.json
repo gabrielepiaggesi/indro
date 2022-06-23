@@ -1,0 +1,32 @@
+[
+    {
+        "label": "Nome",
+        "type": "text",
+        "key": "name"
+    },
+    {
+        "label": "Cognome",
+        "type": "text",
+        "key": "lastname"
+    },
+    {
+        "label": "Data di Nascita",
+        "type": "date",
+        "key": "birthdate"
+    },
+    {
+        "label": "Email",
+        "type": "email",
+        "key": "email"
+    },
+    {
+        "label": "CV",
+        "type": "file",
+        "key": "cv"
+    },
+    {
+        "label": "Breve descrizione personale",
+        "type": "text",
+        "key": "shortBio"
+    }
+]

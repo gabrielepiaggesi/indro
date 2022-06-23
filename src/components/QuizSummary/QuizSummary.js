@@ -2,25 +2,28 @@ import React from 'react';
 import '../../global.css';
 import classes from './QuizSummary.module.css';
 import Button from '../../UI/Button/Button';
+import Card from '../../UI/Card/Card';
 
 const QuizSummary = (props) => {
     return (
-        <div className={`flex fColumn fCenter ${classes.box}`}>
+        <Card className={`flex fColumn w80 mAuto pad15 mB40 gap60`}>
             <p className={classes.title}>Riepilogo</p>
-            {props.tests.map((test, idx) => 
-                <div key={test.id}>
-                    <p className={classes.question}>{((idx+1).toString()) + ' - ' + test.question.text}</p>
-                    <p className={classes.answer}>{test.answer}</p>
-                </div>
-            )}
-            <div className={`flex fRow aCenter jBet w100 ${classes.summary}`}>
+            <div className={`grid n2Col gap40`}>
+                {props.tests.map((test, idx) => 
+                    <Card key={test.id} className="pad15">
+                        <p className={classes.question}>{((idx+1).toString()) + ' - ' + test.question.text}</p>
+                        <p className={classes.answer}>{test.answer}</p>
+                    </Card>
+                )}
+            </div>
+            <div className={`flex fRow aCenter jBet w100`}>
                 <Button 
                     outline={true}
                     onClick={props.onBack}
                 >
                     INDIETRO
                 </Button>
-                <p>Hai risposto a {props.tests.filter(t=>!!t.answer).length} su {props.tests.length}</p>
+                <p style={{fontSize: '21px'}}>Hai risposto a {props.tests.filter(t=>!!t.answer).length} su {props.tests.length}</p>
                 <Button 
                     className="fBold"
                     onClick={props.onSaveAndSend}
@@ -28,7 +31,7 @@ const QuizSummary = (props) => {
                     SALVA E INVIA
                 </Button>
             </div>
-        </div>
+        </Card>
     );
 };
 

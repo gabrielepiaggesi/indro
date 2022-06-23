@@ -3,6 +3,7 @@ import Test from '../Test/Test';
 import '../../global.css';
 import classes from './TestsList.module.css';
 import Button from '../../UI/Button/Button';
+import Card from '../../UI/Card/Card';
 
 const TestsList = (props) => {
     const [testsDone, setTestsDone] = useState(0);
@@ -33,9 +34,9 @@ const TestsList = (props) => {
     };
 
     return (
-        <div className={`flex fColumn fCenter ${classes.box}`}>
+        <div className={`flex fColumn fCenter gap60 ${classes.box}`}>
             {props.tests.map((test, idx) => 
-                <div key={'div'+test.id} className={classes.testWrapper}>
+                <Card key={'div'+test.id} className="pad15">
                     <Test 
                         key={'test'+test.id} 
                         test={test}
@@ -43,9 +44,9 @@ const TestsList = (props) => {
                         onFileSelectSuccess={(e) => onFileSelectSuccessHandler(e, idx)} 
                         onFreeTextSave={(e) => onFreeTextSaveHandler(e, idx)}
                     />
-                </div>
+                </Card>
             )}
-            <div className={`flex fRow aCenter jBet w100 ${classes.summary}`}>
+            <Card className={`flex fRow aCenter jBet w100 ${classes.summary}`}>
                 <Button 
                     outline={true}
                 >
@@ -58,7 +59,7 @@ const TestsList = (props) => {
                 >
                     CONFERMA
                 </Button>
-            </div>
+            </Card>
         </div>
     );
 };
