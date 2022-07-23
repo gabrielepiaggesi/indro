@@ -11,8 +11,9 @@ const QuizSummary = (props) => {
             <div className={`grid n2Col gap40`}>
                 {props.tests.map((test, idx) => 
                     <Card key={test.id} className="pad15">
-                        <p className={classes.question}>{((idx+1).toString()) + ' - ' + test.question.text}</p>
-                        <p className={classes.answer}>{test.answer}</p>
+                        <p className={classes.question}>{((idx+1).toString()) + ' - ' + test.question}</p>
+                        {test.type === 'MULTIPLE' && <p className={classes.answer}>{test.answer.option_text}</p>}
+                        {test.type === 'FREE_TEXT' && <p className={classes.answer}>{test.answer}</p>}
                     </Card>
                 )}
             </div>
@@ -20,6 +21,7 @@ const QuizSummary = (props) => {
                 <Button 
                     outline={true}
                     onClick={props.onBack}
+                    disabled={props.backDisabled}
                 >
                     INDIETRO
                 </Button>

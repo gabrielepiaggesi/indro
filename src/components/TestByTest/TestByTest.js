@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Test from '../Test/Test';
 import '../../global.css';
 import classes from './TestByTest.module.css';
 import Index from '../Index/Index';
 import Button from '../../UI/Button/Button';
 import Card from '../../UI/Card/Card';
+import AppContext from '../../store/app-context';
 
 const TestByTest = (props) => {
+    const ctx = useContext(AppContext);
     const [currentTest, setCurrentTest] = useState(props.tests[0]);
     const [currentIdx, setCurrentIdx] = useState(0);
 
@@ -16,7 +18,7 @@ const TestByTest = (props) => {
     };
 
     const onOptionClickHandler = (optionIdx) => {
-        props.tests[currentIdx].answer = optionIdx+'';
+        props.tests[currentIdx].answer = props.tests[currentIdx].options.find(opt => opt.id === optionIdx);
         setCurrentTest((prevState) => ({ ...prevState, answer: optionIdx+'' }));
     };
 
@@ -33,6 +35,11 @@ const TestByTest = (props) => {
     const onConfirmHandler = () => {
         props.onConfirm(props.tests);
     };
+
+    if (ctx.timer === '0:00') {
+        alert('Tempo FINITO! Conferma cio che hai fatto finora.');
+        onConfirmHandler();
+    }
 
     return (
         <Card className={`pad15 ${classes.box}`}>

@@ -14,10 +14,10 @@ const OptionsList = (props) => {
         <div className={`grid gap20 ${props.mode === 'grid' ? 'n2Col' : 'n1Col'} hFitCont`}>
             {props.options.map((opt, idx) => 
                 <Option 
-                    key={props.testId + '-' + idx} 
-                    selected={idx === selectedOptionIdx} 
-                    text={opt.text} 
-                    onClick={() => onOptionClickHandler(idx)} 
+                    key={opt.id} 
+                    selected={opt.id === selectedOptionIdx} 
+                    text={opt.option_text} 
+                    onClick={() => onOptionClickHandler(opt.id)} 
                 />
             )}
         </div>

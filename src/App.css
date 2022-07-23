@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+
+.c-camera-feed {
+  position: relative;
+  height: 70px;
+  width: 96px;
+}
+.c-camera-feed__viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+.c-camera-feed__stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}
+video {
+  height: 70px;
+  width: 96px;
+}
+#stopCamera, #takePhoto, #startCamera {
+  visibility: hidden;
+  background: white;
+  height: 0px;
+  width: 0px;
+}

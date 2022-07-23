@@ -4,9 +4,9 @@ import classes from './Question.module.css';
 const Question = (props) => {
     return (
         <>
-            <p className={classes.title}>{props.text}</p>
-            {props.showBio && <p className={classes.bio}>{props.text}</p>}
-            {props.img && <img src={props.img} alt="questionImage" />}
+            <p className={classes.title}>{props.question}</p>
+            {props.texts.map(text => <p key={text.id} className={classes.bio}>{text.text}</p>)}
+            {props.images.map(img => <img key={img.id} src={img.image_url} alt="questionImage" />)}
         </>
     );
 };  

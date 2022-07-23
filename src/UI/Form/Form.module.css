@@ -5,34 +5,18 @@
     font-size: 36px;
     margin: 0 auto 20px auto;
 }
-label {
+.form label {
     font-size: 23px;
 }
-input {
+.form input, .form textarea, .form select {
     font-size: 21px;
-    /* border: none; */
+    border: none;
     outline: none;
 }
-
-.title {
-    text-align: left;
-    font-weight: bold;
-    width: 100%;
-    font-size: 36px;
-    margin: 0 auto 20px auto;
-}
-label {
-    font-size: 23px;
-}
-input, textarea, select {
-    font-size: 21px;
-    /* border: none; */
-    outline: none;
-}
-.checkInput {
+.form .checkInput {
     transform: scale(1.8);
 }
-.checkInput:not([disabled]) {
+.form .checkInput:not([disabled]) {
     cursor: pointer;
 }
 
